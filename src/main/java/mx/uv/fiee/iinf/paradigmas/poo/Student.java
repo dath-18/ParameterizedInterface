@@ -1,6 +1,6 @@
 package mx.uv.fiee.iinf.paradigmas.poo;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private int age;
 
@@ -15,5 +15,10 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 " }";
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Integer.compare(this.age, o.age);
     }
 }
